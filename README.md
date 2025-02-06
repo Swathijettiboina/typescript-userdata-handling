@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+# Form Submission with Popup Display and Background Image
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React application that allows users to submit their personal details via a form. Upon submission, the details are displayed in a popup. The application also features a beautiful background image that covers the entire screen for an enhanced user experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Form Inputs**: Users can input their email, first name, last name, and phone number.
+- **Popup Display**: After the form is submitted, a popup appears to show the entered data.
+- **Responsive UI**: The form and popup adjust according to the screen size.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: JavaScript library for building the user interface.
+- **TypeScript**: Superset of JavaScript for better type safety and structure.
+- **TailwindCSS**: Utility-first CSS framework for fast UI development.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Prerequisites
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Node.js (v14 or later)
+- npm (v6 or later) 
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### Installation
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Swathijettiboina/typescript-userdata-handling.git
+    cd typescript-userdata-handling
+    ```
+
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3. Start the development server:
+    ```bash
+    npm start
+    ```
+
+4. Open the application in your browser at `http://localhost:5173`.
+
+## Code Structure
+
+- **App.tsx**: Main component that handles form submission and displays the popup with user data.
+- **DisplayData.tsx**: Popup component that displays the submitted data.
+- **CollectData.tsx**: Component responsible for rendering the form and handling form data.
+- **TailwindCSS**: Styling is done using TailwindCSS for utility-first design.
+
+
+## Contributing
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-branch`)
+3. Make your changes and commit them (`git commit -am 'Add new feature'`)
+4. Push to your branch (`git push origin feature-branch`)
+5. Open a Pull Request
+
